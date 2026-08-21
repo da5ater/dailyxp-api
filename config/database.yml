@@ -1,0 +1,10 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  url: <%= ENV["DATABASE_URL"] %>
+  pool: 5
+test:
+  adapter: postgresql
+  encoding: unicode
+  url: <%= ENV["DATABASE_URL"] || "postgres://dailyxp:dailyxp@localhost:5432/dailyxp_api_test" %>
+  pool: 5
